@@ -14,7 +14,7 @@ characters = [
 ]
 
 # Show random quote
-
+user_answer = "B"
 if user_answer == "B":
     pass
 # - leave the program
@@ -22,3 +22,11 @@ if user_answer == "B":
 else: 
     pass
 # - show another quote
+
+def show_random_quote():
+    # get a random number from the random library
+    # get a quote from the array
+    # display the quote using the print
+    pass
+
+show_random_quote()
