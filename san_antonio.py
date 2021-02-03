@@ -1,22 +1,25 @@
-# Show random quote
-
-# If user_answer is ‘B’: 
-# - leave the program
-
-# Else : 
-# - show another quote
-
 quotes = [
     "Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes ! ",
     "On doit pouvoir choisir entre s'écouter parler et se faire entendre"
 ]
 
 characters = [
-    "Alvin et les Chipmunks",
+    "alvin et les Chipmunks",
     "Babar",
-    "Betty Boop",
-    "Calimero",
-    "Casper",
-    "Le chat potté",
-    "Kirikou"
+    "betty boop",
+    "calimero",
+    "casper",
+    "le chat potté",
+    "kirikou"
 ]
+
+user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
+
+def show_random_quote(my_list):
+    # get a random number from the random library
+    quote = my_list[1]
+    return quote
+
+while user_answer != "B":
+    print( show_random_quote(quotes) )
+    user_answer = "B"
