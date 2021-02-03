@@ -4,30 +4,22 @@ quotes = [
 ]
 
 characters = [
-    "Alvin et les Chipmunks",
+    "alvin et les Chipmunks",
     "Babar",
-    "Betty Boop",
-    "Calimero",
-    "Casper",
-    "Le chat potté",
-    "Kirikou"
+    "betty boop",
+    "calimero",
+    "casper",
+    "le chat potté",
+    "kirikou"
 ]
 
 user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
 
-# Show random quote
-
-if user_answer == "B":
-    pass
-# - leave the program
-
-else: 
-    pass
-# - show another quote
-
 def show_random_quote(my_list):
     # get a random number from the random library
     quote = my_list[1]
-    print(quote)
+    return quote
 
-show_random_quote(quotes)
+while user_answer != "B":
+    print( show_random_quote(quotes) )
+    user_answer = "B"
