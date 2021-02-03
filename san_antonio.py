@@ -13,8 +13,10 @@ characters = [
     "Kirikou"
 ]
 
+user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
+
 # Show random quote
-user_answer = "B"
+
 if user_answer == "B":
     pass
 # - leave the program
