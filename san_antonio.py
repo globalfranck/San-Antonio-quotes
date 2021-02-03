@@ -23,10 +23,9 @@ else:
     pass
 # - show another quote
 
-def show_random_quote():
+def show_random_quote(my_list):
     # get a random number from the random library
-    # get a quote from the array
-    # display the quote using the print
-    pass
+    quote = my_list[1]
+    print(quote)
 
-show_random_quote()
+show_random_quote(quotes)
