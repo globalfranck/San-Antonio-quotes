@@ -1,11 +1,3 @@
-# Show random quote
-
-# If user_answer is ‘B’: 
-# - leave the program
-
-# Else : 
-# - show another quote
-
 quotes = [
     "Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes ! ",
     "On doit pouvoir choisir entre s'écouter parler et se faire entendre"
@@ -20,3 +12,13 @@ characters = [
     "Le chat potté",
     "Kirikou"
 ]
+
+# Show random quote
+
+if user_answer == "B":
+    pass
+# - leave the program
+
+else: 
+    pass
+# - show another quote
