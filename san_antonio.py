@@ -1,11 +1,14 @@
+# Import random module in order to use the randint method to get a random integer
+import random
+
 quotes = [
     "Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes ! ",
     "On doit pouvoir choisir entre s'écouter parler et se faire entendre"
 ]
 
 characters = [
-    "alvin et les Chipmunks",
-    "Babar",
+    "alvin et les chipmunks",
+    "babar",
     "betty boop",
     "calimero",
     "casper",
@@ -13,13 +16,23 @@ characters = [
     "kirikou"
 ]
 
-user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
-
-def show_random_quote(my_list):
+def get_random_item(my_list):
     # get a random number from the random library
-    quote = my_list[1]
+    rand_number = random.randint(0, len(my_list) - 1)    
+    quote = my_list[rand_number]
     return quote
 
-while user_answer != "B":
-    print( show_random_quote(quotes) )
-    user_answer = "B"
+def capitalize(words):
+    for word in words:
+        word.capitalize()
+
+def message(character, quote):
+    """capitalize(character)
+    capitalize(quote)"""
+    return f"{character.capitalize()} a dit : {quote.capitalize()}"
+
+user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
+
+while user_answer != "B" :
+    print( message( get_random_item(characters), get_random_item(quotes)) )
+    user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
