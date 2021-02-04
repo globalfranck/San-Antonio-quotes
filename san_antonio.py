@@ -44,6 +44,7 @@ def get_random_character():
     all_values = read_values_from_json('characters.json', 'character')
     return get_random_item(all_values)
 
+# First interaction with user
 user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
 
 # If user enters B => end the program, otherwise launch the program and show a random quote
