@@ -34,8 +34,6 @@ def capitalize(words):
 # function to create a message which is comprised of the characters name and its quote
         
 def message(character, quote):
-    """capitalize(character)
-    capitalize(quote)"""
     return f"{character.capitalize()} a dit : {quote.capitalize()}"
 
 # First interaction with the user : launching or not the loop
