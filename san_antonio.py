@@ -1,5 +1,7 @@
 # Import random module in order to use the randint method to get a random integer
 import random
+# Import the json library to work with json external files
+import json
 
 # function to obtain a random item from a list
 def get_random_item(my_list):
@@ -28,7 +30,7 @@ def read_values_from_json():
     # open a json file with my objects
     with open("characters.json") as f:
     # load all the data contained in this file
-
+        data = json.load(f)
     # add each entry into my created list
     for entry in data : 
         values.append(entry["character"])
