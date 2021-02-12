@@ -1,23 +1,19 @@
-# Import random module in order to use the randint method to get a random integer
+# Import random and json libraries
 import random
-# Import the json library to work with json external files
 import json
 
-# reading values from an external file
-def read_values_from_json(file, key):
-    # create an empty list
+# Read values from a JSON external file
+def read_values_from_json(path, key):
     values = []
-
     # open a json file with my objects
-    with open(file) as f:
+    with open(path) as f:
     # load all the data contained in this file
         data = json.load(f)
     # add each entry into my created list
-    for entry in data : 
-        values.append(entry[key])
-
+        for entry in data : 
+            values.append(entry[key])
     # return my completed list
-    return values
+            return values
 
 # function to obtain a random item from a list
 def get_random_item(my_list):
@@ -44,10 +40,16 @@ def get_random_character():
     all_values = read_values_from_json('characters.json', 'character')
     return get_random_item(all_values)
 
-# First interaction with user
-user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
-
+def main_loop():
 # If user enters B => end the program, otherwise launch the program and show a random quote
-while user_answer != "B" :
-    print( message( get_random_character(), get_random_quote()) )
-    user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
+    while True :
+        print( message( get_random_character(), get_random_quote()) )
+        message_to_user = "Enter to get another quote. \n To close the program, write 'B' ")
+
+        user_choice = input(message_to_user).upper() # caps of user input will not matter
+        if user_choice == "B":
+            break
+# stopping the loop
+
+if __name__ == '__main__':
+    main_loop()
